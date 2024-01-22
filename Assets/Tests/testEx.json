@@ -1,0 +1,22 @@
+
+//Use this form to create new test
+//questionText - put here a question
+//answers - put here four options
+//numberOfRightAnswers - put here numbers of right answers
+{
+  "questions": [
+    {
+      "questionText": "",
+      "answers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "numbersRightAnswers": [
+
+      ]
+    }
+
+  ]
+}

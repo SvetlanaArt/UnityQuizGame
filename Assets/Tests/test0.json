@@ -1,0 +1,41 @@
+{
+  "questions": [
+    {
+      "questionText": "How do you concatenate two strings in C#?",
+      "answers": [
+        "string result = str1 + str2;",
+        "string result = str1 - str2;",
+        "string result = str1.str2;",
+        "string result = str1.add(str2);"
+      ],
+      "numbersRightAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "How do you declare a one-dimensional array of integers named numbers in C#?",
+      "answers": [
+        "int[] numbers = new int[];",
+        "array numbers = new int[];",
+        "int[] numbers = new array;",
+        "int numbers[] = new int[];"
+      ],
+      "numbersRightAnswers": [
+        0
+      ]
+    },
+    {
+      "questionText": "Which keyword is used to define a block of code that may generate an exception in C#?",
+      "answers": [
+        "throw",
+        "try",
+        "catch",
+        "finally"
+      ],
+      "numbersRightAnswers": [
+        1
+      ]
+    }
+    
+  ]
+}
