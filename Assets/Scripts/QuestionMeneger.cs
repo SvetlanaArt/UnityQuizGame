@@ -1,3 +1,5 @@
+using System;
+using System.Reflection.Emit;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,14 +9,20 @@ public class QuestionMeneger : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI questionText;
     [SerializeField]
-    Button[] answerButtons;
-
+    Toggle[] answerButtons;
+    [SerializeField]
+    int AnswersCount = 4;
+ 
     QuestionData questionData;
     TestManager testManager;
+    bool[] answerIsChecked;
     void Start()
     {
         testManager = FindObjectOfType<TestManager>();
         SetQuestion();
+        answerIsChecked = new bool[AnswersCount];
+        Array.ForEach(answerIsChecked, element => element = false);
+
     }
 
 
@@ -23,17 +31,26 @@ public class QuestionMeneger : MonoBehaviour
         if (testManager != null)
         {
             questionData = testManager.GetNextQuestion();
-            if (questionData != null)
+            if (questionData != null && questionData.answers.Length >= AnswersCount)
             {
                 questionText.text = questionData.questionText;
-                int n = Mathf.Min(questionData.answers.Length, answerButtons.Length);
-                for (int i = 0; i < n; i++)
+                for (int i = 0; i < AnswersCount; i++)
                 {
-                    TextMeshProUGUI answer = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+                    Text answer = answerButtons[i].GetComponentInChildren<Text>();
                     answer.text = questionData.answers[i];
                 }
 
             }
         }
+    }
+
+    public void OnAnswerPressed(int numAnswer)
+    {
+        answerIsChecked[numAnswer] = !answerIsChecked[numAnswer];
+    }
+
+    public void CheckAnswers()
+    {
+ 
     }
 }
