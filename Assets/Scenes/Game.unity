@@ -647,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438759153104094243, guid: 3ff6cbd3cce21c14cb2a97cb441be106, type: 3}
       propertyPath: m_Name
-      value: Toggle (1)
+      value: Answer (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 368084193}
   - component: {fileID: 368084192}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368084193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 569038349}
+        m_TargetAssemblyTypeName: QuestionMeneger, Assembly-CSharp
+        m_MethodName: CheckAnswers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &368084193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,13 +1087,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48aab8ccfcf648c449b35edaa6486816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightAnswerScore: 100
   questionText: {fileID: 55290450}
   answerButtons:
   - {fileID: 1856376419}
   - {fileID: 1549183915}
   - {fileID: 399629370}
   - {fileID: 1493111844}
-  AnswersCount: 4
+  answersCount: 4
+  spriteRightAnswer: {fileID: 21300000, guid: 7e588a858fa875541afe5f1f8fdfe5dd, type: 3}
+  spriteWrongAnswer: {fileID: 21300000, guid: b3dc0c746a1936148aa1a6b4fa4e899e, type: 3}
 --- !u!1 &683051034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438759153104094243, guid: 3ff6cbd3cce21c14cb2a97cb441be106, type: 3}
       propertyPath: m_Name
-      value: Toggle (2)
+      value: Answer (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1285,7 +1300,7 @@ GameObject:
   - component: {fileID: 1681523539}
   - component: {fileID: 1681523540}
   m_Layer: 5
-  m_Name: ButtonGroup
+  m_Name: AnswerGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438759153104094243, guid: 3ff6cbd3cce21c14cb2a97cb441be106, type: 3}
       propertyPath: m_Name
-      value: Toggle (3)
+      value: Answer (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1690,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438759153104094243, guid: 3ff6cbd3cce21c14cb2a97cb441be106, type: 3}
       propertyPath: m_Name
-      value: Toggle
+      value: Answer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
